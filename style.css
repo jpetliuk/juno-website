@@ -1,0 +1,63 @@
+:root {
+  color-scheme: light dark;
+  --bg: #f6f4ef;
+  --surface: #ffffff;
+  --ink: #151514;
+  --muted: #6b685f;
+  --line: #dcd8cd;
+  --accent: #8c3b2e;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0a0a09;
+    --surface: #161615;
+    --ink: #f1eadb;
+    --muted: #a09d93;
+    --line: #2a2a27;
+    --accent: #c2a56e;
+  }
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-underline-offset: 3px; }
+main, header, footer { max-width: 720px; margin: 0 auto; padding-left: 20px; padding-right: 20px; }
+
+header { display: flex; align-items: center; justify-content: space-between; padding-top: 24px; padding-bottom: 24px; }
+header .brand { display: flex; align-items: center; gap: 10px; font-weight: 600; text-decoration: none; }
+header .brand img { width: 34px; height: 34px; border-radius: 8px; }
+header nav { display: flex; gap: 18px; font-size: 0.95rem; }
+header nav a { color: var(--muted); text-decoration: none; }
+header nav a:hover { color: var(--ink); }
+
+h1, h2 { font-family: "Iowan Old Style", "Palatino Linotype", Georgia, serif; font-weight: 400; letter-spacing: -0.01em; }
+h1 { font-size: 2.6rem; line-height: 1.15; margin: 0.4em 0 0.3em; }
+h2 { font-size: 1.5rem; margin: 2em 0 0.4em; }
+p, li { margin: 0.55em 0; }
+.meta { color: var(--muted); }
+.lead { font-size: 1.2rem; color: var(--muted); max-width: 34em; }
+
+.hero { padding: 40px 0 24px; }
+.hero img { width: 88px; height: 88px; border-radius: 20px; }
+.badge {
+  display: inline-block; margin-top: 8px; padding: 6px 14px; border: 1px solid var(--line);
+  border-radius: 999px; font-size: 0.92rem; color: var(--muted);
+}
+
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; margin-top: 18px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 18px 20px; }
+.card h3 { margin: 0 0 4px; font-size: 1.05rem; }
+.card p { margin: 0; color: var(--muted); font-size: 0.97rem; }
+
+hr { border: 0; border-top: 1px solid var(--line); margin: 3em 0 1.5em; }
+footer { padding-top: 0; padding-bottom: 56px; color: var(--muted); font-size: 0.93rem; }
+footer a { margin-right: 16px; }
+
+.doc h1 { font-size: 2.1rem; margin-top: 0.2em; }
+.doc h2 { font-size: 1.25rem; font-family: inherit; font-weight: 600; margin-top: 2em; }
